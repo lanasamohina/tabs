@@ -18,7 +18,6 @@ body {
 .tabs__list {
     list-style-type: none;
     display: flex;
-
 }
 
 .tabs__item {
@@ -51,9 +50,28 @@ body {
     transition: opacity ease-in-out .4s;
 }
 
+.content__wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+.content__wrapper .tabs__content{
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: transform ease-in-out .5s;
+}
+
+.content__wrapper .tabs__content-item{
+    float: left;
+    display: block;
+    width: 500px;
+
+}
+
 .tabs__content-item--active {
     display: block;
-    transition: opacity ease-in-out .4s;
+    transition: opacity ease-in-out .6s;
 }
 
 .tabs_bar{
@@ -63,4 +81,15 @@ body {
     display: none;
     left: 0;
     transition: left ease-in-out .7s;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
 }
