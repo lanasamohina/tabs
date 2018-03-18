@@ -40,7 +40,6 @@ body {
 
 .tabs__item:hover > .tabs__link, .tabs__item--active > .tabs__link {
     color: #fff;
-
 }
 
 .tabs__content-item {
@@ -83,7 +82,6 @@ body {
     transition: left ease-in-out .7s;
 }
 
-
 .clearfix:before,
 .clearfix:after {
     content: '';
@@ -92,4 +90,37 @@ body {
 
 .clearfix:after {
     clear: both;
+}
+
+.accordion{
+    margin: 100px auto;
+    width: 500px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.accordion__item>p{
+    padding: 5px;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, .7);
+}
+
+.accordion__item:not(:first-child)>p{
+    display: none;
+}
+
+.accordion__title{
+    color: rgba(255, 255, 255, .7);
+    background: #00bcd4;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.accordion__item:not(:first-child) .accordion__title{
+    border-top: 1px solid #ffff8d;
+}
+
+.accordion__active{
+    color: #ffffff;
+    background: #00bcd4;
 }

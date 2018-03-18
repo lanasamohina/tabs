@@ -6,6 +6,7 @@ function init () {
 
     const tabsBtn2 = document.querySelector('.js-tabs-slider');
     tabs(tabsBtn2,'slide');
+
 }
 
 function tabs (tabsBtn, effect = 'fade' ) {
@@ -96,4 +97,24 @@ function tabs (tabsBtn, effect = 'fade' ) {
         let itemWidth = document.querySelector('.tabs-slider .tabs__content-item').offsetWidth;
         document.querySelector('.tabs-slider .tabs__content').style.width = itemWidth*n +'px';
     }
+
+
 }
+
+$(function (){
+    accordion();
+
+    function accordion() {
+        let btn = $('.accordion__title--btn');
+        let content = $('.accordion__item > p');
+        btn.on('click', function () {
+            content.hide();
+            btn.removeClass('accordion__active');
+            if(!$(this).hasClass('accordion__active')) {
+                $(this).addClass('accordion__active');
+                $(this).siblings('p').show();
+            }
+        });
+    }
+});
+
